@@ -32,6 +32,11 @@
   <main class="container my-4">
     <h1 class="mb-4">Our Products</h1>
 
+    <!-- TASK 3: search box and sort button -->
+    <input type="text" id="search" placeholder="Search products by name...">
+    <button id="sort-btn" class="btn btn-dark btn-sm">Sort by price</button>
+    <br><br>
+
     <!-- TASK 1: filter radios (must be siblings of the grid row) -->
     <input type="radio" name="cat" id="f-all" value="all" checked>
     <label for="f-all">All</label>
@@ -141,6 +146,10 @@
       </div>
 
     </div>
+
+    <!-- TASK 3: shown when no card matches -->
+    <p id="no-results" style="display: none;">No products found</p>
+
   </main>
 
   <footer class="bg-dark text-white py-4 mt-5">
