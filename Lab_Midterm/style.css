@@ -13,3 +13,38 @@ footer a {
 .quantity-box {
   width: 80px;
 }
+
+/* ===== TASK 1: category filter (H = 259) ===== */
+
+/* radio circle uses the accent colour */
+input[type="radio"] {
+  accent-color: hsl(259, 70%, 45%);
+}
+
+/* space between each radio+label pair, and above the grid */
+input[type="radio"] + label {
+  margin-right: 16px;
+}
+#grid {
+  margin-top: 8px;
+}
+
+/* the label of the selected radio looks selected */
+input:checked + label {
+  color: hsl(259, 70%, 45%);
+  font-weight: bold;
+}
+
+/* hide the cards that do NOT match the checked radio */
+#f-electronics:checked ~ .row .col:not([data-cat="electronics"]) {
+  display: none;
+}
+#f-wearables:checked ~ .row .col:not([data-cat="wearables"]) {
+  display: none;
+}
+#f-outdoor:checked ~ .row .col:not([data-cat="outdoor"]) {
+  display: none;
+}
+#f-footwear:checked ~ .row .col:not([data-cat="footwear"]) {
+  display: none;
+}
